@@ -6,20 +6,16 @@ import java.util.List;
 public class Students {
     List<Integer> heights = new ArrayList<>();
 
-    public void addHeight (int height) {
+    public void addHeight(int height) {
         heights.add(height);
     }
 
     public boolean isHeightsIncreasing() {
-        boolean increase = true;
         for (int i = 1; i < heights.size(); i++) {
-            if (heights.get(i) > heights.get(i - 1)) {
-                increase = true;
-            } else {
-                increase = false;
-                break;
+            if (heights.get(i) < heights.get(i - 1)) {
+                return false;
             }
         }
-        return increase;
+        return true;
     }
 }

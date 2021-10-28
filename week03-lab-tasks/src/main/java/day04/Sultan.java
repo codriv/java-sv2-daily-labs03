@@ -6,7 +6,7 @@ public class Sultan {
         prison.openFreeCells();
         String freeCells = "";
         for (int i = 0; i < prison.getCells().length; i++) {
-            freeCells += prison.getCells()[i] ? i + 1 + ", ": "";
+            freeCells += prison.getCells()[i] ? i + 1 + ", " : "";
         }
         System.out.println("\nA nyitott cellák " + prison.getCells().length + " nap után:");
         System.out.println(freeCells.substring(0, (freeCells.length() - 2)));

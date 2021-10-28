@@ -19,16 +19,11 @@ public class GuessTheNumber {
         this.randomNumber = randomNumber;
     }
 
-    public void setGivenNumber(int givenNumber) {
-        this.givenNumber = givenNumber;
-    }
-
     public void printResult() {
         Scanner scanner = new Scanner(System.in);
         for (int i = 1; i <= tryMax; i++) {
             System.out.print(tryMax + "/" + i + ": ");
-            int givenNumber = scanner.nextInt();
-            setGivenNumber(givenNumber);
+            givenNumber = scanner.nextInt();
             scanner.nextLine();
             if (givenNumber == randomNumber) {
                 System.out.println("Talált");
